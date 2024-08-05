@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/days"
+    android:id="@+id/background_weather"
+    tools:context=".MainActivity">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        app:cardCornerRadius="10dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:id="@+id/card_view">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#8696E3FD"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/style_spinner"
+                android:id="@+id/search_prvince"
+                android:dropDownVerticalOffset="50dp"
+                android:textColor="@android:color/black"
+                android:padding="10dp">
+            </Spinner>
+
+            <Spinner
+                android:id="@+id/search_district"
+                android:layout_width="0dp"
+                android:background="@drawable/style_spinner"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:layout_weight="1"
+                android:padding="10dp">
+            </Spinner>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/LocationCurren_Btn"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:id="@+id/card_view2"
+        app:cardBackgroundColor="#D5FFFFFF"
+        app:cardCornerRadius="10dp"
+        android:background="@drawable/bg_cardview">
+
+        <LinearLayout
+            android:id="@+id/LL_Temp"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:background="#0FFFF9F9"
+            android:orientation="horizontal"
+            android:padding="28dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="Nhiệt độ"
+                android:textSize="24dp"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtTemp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="       "
+                android:textColor="@color/black"
+                android:textSize="24dp"
+                android:textStyle="bold"
+                android:gravity="end" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/card_view2"
+        android:id="@+id/card_view3"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        app:cardBackgroundColor="#D5FFFFFF"
+        app:cardCornerRadius="10dp"
+        android:background="@drawable/bg_cardview">
+
+        <LinearLayout
+            android:id="@+id/LL_UV"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:background="#0FFFF9F9"
+            android:orientation="horizontal"
+            android:padding="28dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="Chỉ số UV"
+                android:textSize="24dp"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtTemp2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:fontFamily="@font/quicksand_bold"
+                android:textColor="@color/black"
+                android:text="       "
+                android:textSize="24dp" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/card_view3"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        app:cardBackgroundColor="#D5FFFFFF"
+        app:cardCornerRadius="10dp"
+        android:background="@drawable/bg_cardview">
+
+        <LinearLayout
+            android:id="@+id/LL_Water"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:background="#0FFFF9F9"
+            android:orientation="horizontal"
+            android:padding="28dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="Độ ẩm"
+                android:textColor="@color/black"
+                android:textSize="24dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtTemp3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/quicksand_bold"
+                android:textColor="@color/black"
+                android:gravity="end"
+                android:text="       "
+                android:textSize="24dp" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/icon_weather"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="159dp"
+        android:layout_marginTop="135dp"
+        android:layout_marginEnd="159dp"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical">
+    </ImageView>
+
+    <com.ltuddd.weatherapi.CustomizeTextView
+        android:id="@+id/clockText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/icon_weather"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="Time right now"
+        android:textSize="50dp"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+    <com.ltuddd.weatherapi.CustomizeTextView
+        android:id="@+id/DayText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/clockText"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="Day"
+        android:textSize="24dp"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+    <com.ltuddd.weatherapi.CustomizeTextView
+        android:id="@+id/locatext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Vị trí hiện tại"
+        android:fontFamily="@font/quicksand_bold"
+        android:layout_below="@+id/DayText"
+        android:layout_centerHorizontal="true"
+        android:textSize="24sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"/>
+
+    <Switch
+        android:id="@+id/LocationCurren_Btn"
+        android:layout_marginTop="13dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/quicksand_bold"
+        android:layout_below="@+id/DayText"
+        android:layout_centerHorizontal="true"
+        android:layout_toLeftOf="@+id/locatext"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+
+</RelativeLayout>
